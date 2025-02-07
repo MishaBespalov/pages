@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Navigation on Terminal</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in Navigation on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nats</title>
+      <link>//localhost:1313/posts/nats/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/nats/</guid>
+      <description>&lt;h1 id=&#34;nats&#34;&gt;Nats&lt;/h1&gt;
+&lt;h2 id=&#34;nats-core&#34;&gt;Nats Core&lt;/h2&gt;
+&lt;p&gt;Нужно дописывать это решение под себя, так как это только core&lt;/p&gt;
+&lt;h2 id=&#34;nats---jetstream&#34;&gt;Nats - Jetstream&lt;/h2&gt;
+&lt;p&gt;По факту используется большинством, для запуска требуется 2+ реплики&lt;/p&gt;
+&lt;h3 id=&#34;stream&#34;&gt;Stream&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создается stream&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создаешь топики&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь тип хранения данных&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;В памяти&lt;/li&gt;
+&lt;li&gt;На диске&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Указываешь ретеншн полики&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;По времени сообщения&lt;/li&gt;
+&lt;li&gt;По количеству общих сообщений&lt;/li&gt;
+&lt;li&gt;По общему количеству байт&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consumers&#34;&gt;Consumers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создается consumer&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь паттерн взаимодействия&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Pub / Sub&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Идет разделение между отправителем и получателем.
+Отправитель может не знать кто получатель.
+И более того, отправитель после отправки и получения АСК, не ждёт ничего.
+&lt;ul&gt;
+&lt;li&gt;Плюсы
+&lt;ul&gt;
+&lt;li&gt;Независимостб&lt;/li&gt;
+&lt;li&gt;Масштабируемость&lt;/li&gt;
+&lt;li&gt;Гибкость&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Request / Reply&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;nats&#34;&gt;Nats&lt;/h1&gt;
+&lt;h2 id=&#34;nats-core&#34;&gt;Nats Core&lt;/h2&gt;
+&lt;p&gt;Нужно дописывать это решение под себя, так как это только core&lt;/p&gt;
+&lt;h2 id=&#34;nats---jetstream&#34;&gt;Nats - Jetstream&lt;/h2&gt;
+&lt;p&gt;По факту используется большинством, для запуска требуется 2+ реплики&lt;/p&gt;
+&lt;h3 id=&#34;stream&#34;&gt;Stream&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создается stream&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создаешь топики&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь тип хранения данных&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;В памяти&lt;/li&gt;
+&lt;li&gt;На диске&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Указываешь ретеншн полики&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;По времени сообщения&lt;/li&gt;
+&lt;li&gt;По количеству общих сообщений&lt;/li&gt;
+&lt;li&gt;По общему количеству байт&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consumers&#34;&gt;Consumers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создается consumer&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь паттерн взаимодействия&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Pub / Sub&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Идет разделение между отправителем и получателем.
+Отправитель может не знать кто получатель.
+И более того, отправитель после отправки и получения АСК, не ждёт ничего.
+&lt;ul&gt;
+&lt;li&gt;Плюсы
+&lt;ul&gt;
+&lt;li&gt;Независимостб&lt;/li&gt;
+&lt;li&gt;Масштабируемость&lt;/li&gt;
+&lt;li&gt;Гибкость&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Request / Reply&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Клиент отправляет запрос в котором есть пометка &amp;ldquo;ответить клиенту&amp;rdquo; и ждёт ответа от сервиса.
+&lt;ul&gt;
+&lt;li&gt;Плюсы
+&lt;ul&gt;
+&lt;li&gt;Синхронность операций&lt;/li&gt;
+&lt;li&gt;Прямая обработка ответов&lt;/li&gt;
+&lt;li&gt;Простота&lt;/li&gt;
+&lt;li&gt;Скорость&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Queuing&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;По сути это Loadbalancing только бэкэндом выступает очередь в которую входит группа из получателей.
+&lt;ul&gt;
+&lt;li&gt;Плюсы
+&lt;ul&gt;
+&lt;li&gt;Высокая отказоустойчивость&lt;/li&gt;
+&lt;li&gt;Оптимальное использование ресурсов&lt;/li&gt;
+&lt;li&gt;Равномерная нагрузка на каждый сервис&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь паттерн доставки&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Push_Based Consumer
+&lt;ul&gt;
+&lt;li&gt;Натс пушит сообщения как только они становятся доступными для отправки
+&lt;ul&gt;
+&lt;li&gt;Pub_Sub&lt;/li&gt;
+&lt;li&gt;Request / Reply&lt;/li&gt;
+&lt;li&gt;Queuing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pull_Based Consumer
+&lt;ul&gt;
+&lt;li&gt;Consumer сам запрашивает сообщения когда это ему становится нужным
+&lt;ul&gt;
+&lt;li&gt;Pub_Sub&lt;/li&gt;
+&lt;li&gt;Queuing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/posts/bigo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/bigo/</guid>
+      <description>&lt;h1 id=&#34;bigo&#34;&gt;BigO&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Виды сложностей&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(1) - Константа. Быстро, круто&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(log(n)) - Логарифмическая. Всё равно очень крутая.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n) - Линейная. Среднячок.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n x log(n)) - Любая сортировка выдает такую сложность. В принципе не сильно хуже чем O(n)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n^2) - Квадратичная. Плохо, нужно что-то мутить, туда-сюда. Как-то хитрить.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(2^n) - Экспоненциальная. Ну это пиздец, это никуда не годиться.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Почему динамический массив при Асимптотическом анализе это O(1) ?&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;n&lt;/th&gt;
+          &lt;th&gt;1&lt;/th&gt;
+          &lt;th&gt;2&lt;/th&gt;
+          &lt;th&gt;3&lt;/th&gt;
+          &lt;th&gt;4&lt;/th&gt;
+          &lt;th&gt;5&lt;/th&gt;
+          &lt;th&gt;6&lt;/th&gt;
+          &lt;th&gt;7&lt;/th&gt;
+          &lt;th&gt;8&lt;/th&gt;
+          &lt;th&gt;9&lt;/th&gt;
+          &lt;th&gt;10&lt;/th&gt;
+          &lt;th&gt;11&lt;/th&gt;
+          &lt;th&gt;12&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;size&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;cost&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;q&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;11&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;Док-во&lt;/code&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;bigo&#34;&gt;BigO&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Виды сложностей&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(1) - Константа. Быстро, круто&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(log(n)) - Логарифмическая. Всё равно очень крутая.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n) - Линейная. Среднячок.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n x log(n)) - Любая сортировка выдает такую сложность. В принципе не сильно хуже чем O(n)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n^2) - Квадратичная. Плохо, нужно что-то мутить, туда-сюда. Как-то хитрить.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(2^n) - Экспоненциальная. Ну это пиздец, это никуда не годиться.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Почему динамический массив при Асимптотическом анализе это O(1) ?&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;n&lt;/th&gt;
+          &lt;th&gt;1&lt;/th&gt;
+          &lt;th&gt;2&lt;/th&gt;
+          &lt;th&gt;3&lt;/th&gt;
+          &lt;th&gt;4&lt;/th&gt;
+          &lt;th&gt;5&lt;/th&gt;
+          &lt;th&gt;6&lt;/th&gt;
+          &lt;th&gt;7&lt;/th&gt;
+          &lt;th&gt;8&lt;/th&gt;
+          &lt;th&gt;9&lt;/th&gt;
+          &lt;th&gt;10&lt;/th&gt;
+          &lt;th&gt;11&lt;/th&gt;
+          &lt;th&gt;12&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;size&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;cost&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;q&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;11&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;Док-во&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Cколько действий нужно сделать?
+Каждый раз точно нужно вставлять по единичке,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Сколько раз мы копируем?
+Мы log(n) по основанию два делаем копирований
+А всего у нас n операций&lt;/p&gt;
+&lt;p&gt;Тут типо формула суммы геометрической прогрессии вместо чиселки сколько раз мы копируем.&lt;/p&gt;
+&lt;p&gt;То есть, (n + log(n)) / n
+Что равняется = (n+ 2^log(n)-1) / n = ( n +n ) / n = 2
+&lt;code&gt;И при Ассимптотическом анализе это будет n / n = 1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/posts/two-pointers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/two-pointers/</guid>
+      <description>&lt;h1 id=&#34;two-pointers&#34;&gt;Two Pointers&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Задача реверснуть строку.&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;-&amp;gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;a&lt;/td&gt;
+          &lt;td&gt;b&lt;/td&gt;
+          &lt;td&gt;c&lt;/td&gt;
+          &lt;td&gt;d&lt;/td&gt;
+          &lt;td&gt;e&lt;/td&gt;
+          &lt;td&gt;f&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&amp;lt;-&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Решение
+Логика простая, ставим указатель в начало и в конец.
+Свапаем местами значения с указателей, потом сдвигаем указатели друг к другу до тех пор пока они не встретятся.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Чекнуть палиндром&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;-&amp;gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;a&lt;/td&gt;
+          &lt;td&gt;b,&lt;/td&gt;
+          &lt;td&gt;c&lt;/td&gt;
+          &lt;td&gt;c&lt;/td&gt;
+          &lt;td&gt;b&lt;/td&gt;
+          &lt;td&gt;a.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&amp;lt;-&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Решение
+Логика простая, ставим указатель в начало и в конец.
+Сверяем значение в указателях, если равны, то сдвигаем указатели друг к другу.
+Если не равны то не палиндром.
+При этом делаем чем, что символ находтися в a-z границах, иначе скипаем такой символ&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <content>&lt;h1 id=&#34;two-pointers&#34;&gt;Two Pointers&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Задача реверснуть строку.&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;-&amp;gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;a&lt;/td&gt;
+          &lt;td&gt;b&lt;/td&gt;
+          &lt;td&gt;c&lt;/td&gt;
+          &lt;td&gt;d&lt;/td&gt;
+          &lt;td&gt;e&lt;/td&gt;
+          &lt;td&gt;f&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&amp;lt;-&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Решение
+Логика простая, ставим указатель в начало и в конец.
+Свапаем местами значения с указателей, потом сдвигаем указатели друг к другу до тех пор пока они не встретятся.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Чекнуть палиндром&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;-&amp;gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;a&lt;/td&gt;
+          &lt;td&gt;b,&lt;/td&gt;
+          &lt;td&gt;c&lt;/td&gt;
+          &lt;td&gt;c&lt;/td&gt;
+          &lt;td&gt;b&lt;/td&gt;
+          &lt;td&gt;a.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&amp;lt;-&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Решение
+Логика простая, ставим указатель в начало и в конец.
+Сверяем значение в указателях, если равны, то сдвигаем указатели друг к другу.
+Если не равны то не палиндром.
+При этом делаем чем, что символ находтися в a-z границах, иначе скипаем такой символ&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/posts/zettelkasten/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/zettelkasten/</guid>
+      <description>&lt;h1 id=&#34;zettelkasten&#34;&gt;Zettelkasten&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Атомарно создаешь файлы с одной идеей&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Один файл = Одна идея&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Создаешь тэги на ключевые слова.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Создаешь тэги, и потом можешь искать по этим тэгам информацию в разных атомарных файлах/идеях.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Связывать атомарные файлы между собой с помощью линков.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Линки это главный способ перемещения от файла к файлу.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Никогда ничего не копипастить, и даже не переписывать руками&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Только пропускание идей через себя и выписывание их так, как чувствуешь.&lt;/li&gt;
+&lt;li&gt;Если ты не можешь написать мысль полностью сам, скорее всего ты её не понял.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;zettelkasten_revisited&#34;&gt;Переосмысление этих принципов&lt;/a&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;zettelkasten&#34;&gt;Zettelkasten&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Атомарно создаешь файлы с одной идеей&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Один файл = Одна идея&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Создаешь тэги на ключевые слова.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Создаешь тэги, и потом можешь искать по этим тэгам информацию в разных атомарных файлах/идеях.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Связывать атомарные файлы между собой с помощью линков.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Линки это главный способ перемещения от файла к файлу.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Никогда ничего не копипастить, и даже не переписывать руками&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Только пропускание идей через себя и выписывание их так, как чувствуешь.&lt;/li&gt;
+&lt;li&gt;Если ты не можешь написать мысль полностью сам, скорее всего ты её не понял.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;zettelkasten_revisited&#34;&gt;Переосмысление этих принципов&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Summary&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Тем самым линки позволяют увидеть связи между атомарными файлами/идеями
+А тэги позволяют увидеть общий паттерн который может присутствовать в нескольких разных идеях.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

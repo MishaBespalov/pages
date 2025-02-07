@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pub_sub on Terminal</title>
+    <link>//localhost:1313/tags/pub_sub/</link>
+    <description>Recent content in Pub_sub on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/pub_sub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nats</title>
+      <link>//localhost:1313/posts/nats/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/nats/</guid>
+      <description>&lt;h1 id=&#34;nats&#34;&gt;Nats&lt;/h1&gt;
+&lt;h2 id=&#34;nats-core&#34;&gt;Nats Core&lt;/h2&gt;
+&lt;p&gt;Нужно дописывать это решение под себя, так как это только core&lt;/p&gt;
+&lt;h2 id=&#34;nats---jetstream&#34;&gt;Nats - Jetstream&lt;/h2&gt;
+&lt;p&gt;По факту используется большинством, для запуска требуется 2+ реплики&lt;/p&gt;
+&lt;h3 id=&#34;stream&#34;&gt;Stream&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создается stream&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создаешь топики&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь тип хранения данных&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;В памяти&lt;/li&gt;
+&lt;li&gt;На диске&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Указываешь ретеншн полики&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;По времени сообщения&lt;/li&gt;
+&lt;li&gt;По количеству общих сообщений&lt;/li&gt;
+&lt;li&gt;По общему количеству байт&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consumers&#34;&gt;Consumers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создается consumer&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь паттерн взаимодействия&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Pub / Sub&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Идет разделение между отправителем и получателем.
+Отправитель может не знать кто получатель.
+И более того, отправитель после отправки и получения АСК, не ждёт ничего.
+&lt;ul&gt;
+&lt;li&gt;Плюсы
+&lt;ul&gt;
+&lt;li&gt;Независимостб&lt;/li&gt;
+&lt;li&gt;Масштабируемость&lt;/li&gt;
+&lt;li&gt;Гибкость&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Request / Reply&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;nats&#34;&gt;Nats&lt;/h1&gt;
+&lt;h2 id=&#34;nats-core&#34;&gt;Nats Core&lt;/h2&gt;
+&lt;p&gt;Нужно дописывать это решение под себя, так как это только core&lt;/p&gt;
+&lt;h2 id=&#34;nats---jetstream&#34;&gt;Nats - Jetstream&lt;/h2&gt;
+&lt;p&gt;По факту используется большинством, для запуска требуется 2+ реплики&lt;/p&gt;
+&lt;h3 id=&#34;stream&#34;&gt;Stream&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создается stream&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создаешь топики&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь тип хранения данных&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;В памяти&lt;/li&gt;
+&lt;li&gt;На диске&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Указываешь ретеншн полики&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;По времени сообщения&lt;/li&gt;
+&lt;li&gt;По количеству общих сообщений&lt;/li&gt;
+&lt;li&gt;По общему количеству байт&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consumers&#34;&gt;Consumers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Создается consumer&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь паттерн взаимодействия&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Pub / Sub&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Идет разделение между отправителем и получателем.
+Отправитель может не знать кто получатель.
+И более того, отправитель после отправки и получения АСК, не ждёт ничего.
+&lt;ul&gt;
+&lt;li&gt;Плюсы
+&lt;ul&gt;
+&lt;li&gt;Независимостб&lt;/li&gt;
+&lt;li&gt;Масштабируемость&lt;/li&gt;
+&lt;li&gt;Гибкость&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Request / Reply&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Клиент отправляет запрос в котором есть пометка &amp;ldquo;ответить клиенту&amp;rdquo; и ждёт ответа от сервиса.
+&lt;ul&gt;
+&lt;li&gt;Плюсы
+&lt;ul&gt;
+&lt;li&gt;Синхронность операций&lt;/li&gt;
+&lt;li&gt;Прямая обработка ответов&lt;/li&gt;
+&lt;li&gt;Простота&lt;/li&gt;
+&lt;li&gt;Скорость&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Queuing&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;По сути это Loadbalancing только бэкэндом выступает очередь в которую входит группа из получателей.
+&lt;ul&gt;
+&lt;li&gt;Плюсы
+&lt;ul&gt;
+&lt;li&gt;Высокая отказоустойчивость&lt;/li&gt;
+&lt;li&gt;Оптимальное использование ресурсов&lt;/li&gt;
+&lt;li&gt;Равномерная нагрузка на каждый сервис&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Выбираешь паттерн доставки&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Push_Based Consumer
+&lt;ul&gt;
+&lt;li&gt;Натс пушит сообщения как только они становятся доступными для отправки
+&lt;ul&gt;
+&lt;li&gt;Pub_Sub&lt;/li&gt;
+&lt;li&gt;Request / Reply&lt;/li&gt;
+&lt;li&gt;Queuing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pull_Based Consumer
+&lt;ul&gt;
+&lt;li&gt;Consumer сам запрашивает сообщения когда это ему становится нужным
+&lt;ul&gt;
+&lt;li&gt;Pub_Sub&lt;/li&gt;
+&lt;li&gt;Queuing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

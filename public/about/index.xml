@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Terminal</title>
+    <link>//localhost:1313/about/</link>
+    <description>Recent content in Abouts on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="//localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, Space Cowboy</title>
+      <link>//localhost:1313/about/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/about/about/</guid>
+      <description>&lt;p&gt;Welcome to my corner of the digital universe! I&amp;rsquo;m &lt;strong&gt;Misha&lt;/strong&gt;—a curious technologist passionate about exploring everything from coding breakthroughs to creative design and beyond.&lt;/p&gt;
+&lt;h2 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;In-Depth Tutorials:&lt;/strong&gt; Step-by-step guides on emerging tech trends.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Personal Reflections:&lt;/strong&gt; Musings on innovation, creativity, and the future of technology.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project Spotlights:&lt;/strong&gt; Updates and insights into my personal projects and experiments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ready to dive in? Check out my &lt;a href=&#34;https://MishaBespalov.github.io/pages/posts&#34;&gt;latest posts&lt;/a&gt; and join me on this journey through the ever-evolving world of technology.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Welcome to my corner of the digital universe! I&amp;rsquo;m &lt;strong&gt;Misha&lt;/strong&gt;—a curious technologist passionate about exploring everything from coding breakthroughs to creative design and beyond.&lt;/p&gt;
+&lt;h2 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;In-Depth Tutorials:&lt;/strong&gt; Step-by-step guides on emerging tech trends.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Personal Reflections:&lt;/strong&gt; Musings on innovation, creativity, and the future of technology.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project Spotlights:&lt;/strong&gt; Updates and insights into my personal projects and experiments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ready to dive in? Check out my &lt;a href=&#34;https://MishaBespalov.github.io/pages/posts&#34;&gt;latest posts&lt;/a&gt; and join me on this journey through the ever-evolving world of technology.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Stay curious and keep exploring!&lt;/em&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

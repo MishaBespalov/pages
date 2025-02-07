@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithms/BigO on Terminal</title>
+    <link>//localhost:1313/tags/algorithms/bigo/</link>
+    <description>Recent content in Algorithms/BigO on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="//localhost:1313/tags/algorithms/bigo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>//localhost:1313/posts/bigo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/bigo/</guid>
+      <description>&lt;h1 id=&#34;bigo&#34;&gt;BigO&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Виды сложностей&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(1) - Константа. Быстро, круто&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(log(n)) - Логарифмическая. Всё равно очень крутая.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n) - Линейная. Среднячок.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n x log(n)) - Любая сортировка выдает такую сложность. В принципе не сильно хуже чем O(n)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n^2) - Квадратичная. Плохо, нужно что-то мутить, туда-сюда. Как-то хитрить.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(2^n) - Экспоненциальная. Ну это пиздец, это никуда не годиться.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Почему динамический массив при Асимптотическом анализе это O(1) ?&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;n&lt;/th&gt;
+          &lt;th&gt;1&lt;/th&gt;
+          &lt;th&gt;2&lt;/th&gt;
+          &lt;th&gt;3&lt;/th&gt;
+          &lt;th&gt;4&lt;/th&gt;
+          &lt;th&gt;5&lt;/th&gt;
+          &lt;th&gt;6&lt;/th&gt;
+          &lt;th&gt;7&lt;/th&gt;
+          &lt;th&gt;8&lt;/th&gt;
+          &lt;th&gt;9&lt;/th&gt;
+          &lt;th&gt;10&lt;/th&gt;
+          &lt;th&gt;11&lt;/th&gt;
+          &lt;th&gt;12&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;size&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;cost&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;q&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;11&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;Док-во&lt;/code&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;bigo&#34;&gt;BigO&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Виды сложностей&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(1) - Константа. Быстро, круто&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(log(n)) - Логарифмическая. Всё равно очень крутая.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n) - Линейная. Среднячок.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n x log(n)) - Любая сортировка выдает такую сложность. В принципе не сильно хуже чем O(n)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(n^2) - Квадратичная. Плохо, нужно что-то мутить, туда-сюда. Как-то хитрить.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O(2^n) - Экспоненциальная. Ну это пиздец, это никуда не годиться.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Почему динамический массив при Асимптотическом анализе это O(1) ?&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;n&lt;/th&gt;
+          &lt;th&gt;1&lt;/th&gt;
+          &lt;th&gt;2&lt;/th&gt;
+          &lt;th&gt;3&lt;/th&gt;
+          &lt;th&gt;4&lt;/th&gt;
+          &lt;th&gt;5&lt;/th&gt;
+          &lt;th&gt;6&lt;/th&gt;
+          &lt;th&gt;7&lt;/th&gt;
+          &lt;th&gt;8&lt;/th&gt;
+          &lt;th&gt;9&lt;/th&gt;
+          &lt;th&gt;10&lt;/th&gt;
+          &lt;th&gt;11&lt;/th&gt;
+          &lt;th&gt;12&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;size&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;cost&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;q&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;11&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;Док-во&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Cколько действий нужно сделать?
+Каждый раз точно нужно вставлять по единичке,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Сколько раз мы копируем?
+Мы log(n) по основанию два делаем копирований
+А всего у нас n операций&lt;/p&gt;
+&lt;p&gt;Тут типо формула суммы геометрической прогрессии вместо чиселки сколько раз мы копируем.&lt;/p&gt;
+&lt;p&gt;То есть, (n + log(n)) / n
+Что равняется = (n+ 2^log(n)-1) / n = ( n +n ) / n = 2
+&lt;code&gt;И при Ассимптотическом анализе это будет n / n = 1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

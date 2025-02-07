@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Http on Terminal</title>
+    <link>//localhost:1313/tags/http/</link>
+    <description>Recent content in Http on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="//localhost:1313/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>//localhost:1313/posts/go-http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/go-http/</guid>
+      <description>&lt;h1 id=&#34;go-http&#34;&gt;go-http&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Дефолтный сервер http&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ListneAndServe&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;mux&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Функция которая принимает параметры&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;адрес на котором слушает&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Обоработчик запросов (хэндлер / мультиплексер)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;И делает так, что программа слушает на порту коннекты используя дефолтный http ServeMux&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Лучше никогда не передавать nil так как это дефолтный ServeMux и его можно будет переопределить где-нибудь в другом пакете случайно.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Определяем свой сервер&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;Addr&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:8081&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Handler&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ListenAndServe&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Определяем свой ServeMux.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Функция которая возвращает новый мультиплексер
+Тут мы определяем для нашего нового ServeMux&amp;rsquo;a кастомный путь&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;go-http&#34;&gt;go-http&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Дефолтный сервер http&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ListneAndServe&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;mux&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Функция которая принимает параметры&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;адрес на котором слушает&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Обоработчик запросов (хэндлер / мультиплексер)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;И делает так, что программа слушает на порту коннекты используя дефолтный http ServeMux&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Лучше никогда не передавать nil так как это дефолтный ServeMux и его можно будет переопределить где-нибудь в другом пакете случайно.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Определяем свой сервер&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;Addr&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:8081&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Handler&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ListenAndServe&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Определяем свой ServeMux.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Функция которая возвращает новый мультиплексер
+Тут мы определяем для нашего нового ServeMux&amp;rsquo;a кастомный путь&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;NewServeMux&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;HandleFunc&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/hello&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Методы&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GET
+&lt;ul&gt;
+&lt;li&gt;Запрашивает ресурс. Может только извлекать данные&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HEAD
+&lt;ul&gt;
+&lt;li&gt;Запрашивает также как и GET, но без тела ответа&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;POST
+&lt;ul&gt;
+&lt;li&gt;Используется чтобы создать новую сущность, сам использует тело и получает в возврате тело&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PUT
+&lt;ul&gt;
+&lt;li&gt;Заменяет текущие данные в ресурсе на новые данные&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DELETE
+&lt;ul&gt;
+&lt;li&gt;Удаляет указанный ресурс&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PATCH
+&lt;ul&gt;
+&lt;li&gt;Мини пут. Заменяет одно поле в сущности.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Handler&#39;ы&lt;/code&gt;
+Определяем свой ServeMux.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/posts/go-http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/go-http/</guid>
+      <description>&lt;h1 id=&#34;go-http&#34;&gt;go-http&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Дефолтный сервер http&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ListneAndServe&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;mux&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Функция которая принимает параметры&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;адрес на котором слушает&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Обоработчик запросов (хэндлер / мультиплексер)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;И делает так, что программа слушает на порту коннекты используя дефолтный http ServeMux&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Лучше никогда не передавать nil так как это дефолтный ServeMux и его можно будет переопределить где-нибудь в другом пакете случайно.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Определяем свой сервер&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;Addr&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:8081&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Handler&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ListenAndServe&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Определяем свой ServeMux.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Функция которая возвращает новый мультиплексер
+Тут мы определяем для нашего нового ServeMux&amp;rsquo;a кастомный путь&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;go-http&#34;&gt;go-http&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Дефолтный сервер http&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ListneAndServe&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;mux&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Функция которая принимает параметры&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;адрес на котором слушает&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Обоработчик запросов (хэндлер / мультиплексер)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;И делает так, что программа слушает на порту коннекты используя дефолтный http ServeMux&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Лучше никогда не передавать nil так как это дефолтный ServeMux и его можно будет переопределить где-нибудь в другом пакете случайно.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Определяем свой сервер&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;Addr&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:8081&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Handler&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ListenAndServe&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Определяем свой ServeMux.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Функция которая возвращает новый мультиплексер
+Тут мы определяем для нашего нового ServeMux&amp;rsquo;a кастомный путь&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;NewServeMux&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;router&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;HandleFunc&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/hello&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Методы&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GET
+&lt;ul&gt;
+&lt;li&gt;Запрашивает ресурс. Может только извлекать данные&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HEAD
+&lt;ul&gt;
+&lt;li&gt;Запрашивает также как и GET, но без тела ответа&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;POST
+&lt;ul&gt;
+&lt;li&gt;Используется чтобы создать новую сущность, сам использует тело и получает в возврате тело&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PUT
+&lt;ul&gt;
+&lt;li&gt;Заменяет текущие данные в ресурсе на новые данные&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DELETE
+&lt;ul&gt;
+&lt;li&gt;Удаляет указанный ресурс&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PATCH
+&lt;ul&gt;
+&lt;li&gt;Мини пут. Заменяет одно поле в сущности.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Handler&#39;ы&lt;/code&gt;
+Определяем свой ServeMux.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
